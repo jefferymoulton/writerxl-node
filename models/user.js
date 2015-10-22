@@ -5,10 +5,12 @@ var salt = bcrypt.genSaltSync();
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    email: { type: String, index: { unique: true } },
-    first_name: { type: String },
-    last_name: { type: String },
-    hashed_password: { type: String }
+    email:              { type: String, index: { unique: true } },
+    first_name:         String,
+    last_name:          String,
+    hashed_password:    String,
+    active:             Boolean,
+    date_created:       Date
 });
 
 UserSchema
@@ -19,4 +21,4 @@ UserSchema
     })
     .get(function() { return this._password });
 
-mongoose.model('User', UserSchema);
+module.exports = User = mongoose.model('User', UserSchema);
