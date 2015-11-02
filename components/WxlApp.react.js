@@ -8,7 +8,7 @@ module.exports = WxlApp = React.createClass({
 
         return (
             <div className='wxl-app'>
-                <p>Hi, I'm a duck</p>
+                <p>Ducks on the pond</p>
             </div>
         )
 

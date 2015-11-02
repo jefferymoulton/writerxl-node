@@ -5,10 +5,26 @@ var JSX = require('node-jsx').install(),
 module.exports = {
 
   index: function(req, res) {
-    res.render('home', {
-      markup: "Hi, I'm a duck",
-      state: JSON.stringify({ "test": "test" })
-    });
-  }
+
+      var markup = React.renderComponentToString(
+          WxlApp()
+      );
+
+      res.render('home', {
+          markup: markup,
+          state: JSON.stringify({test: "test"})
+      });
+
+  }/*,
+
+  signup: function(req, res) {
+
+      var markup =
+
+      res.render('home', {
+          markup: "I'm still a duck",
+          state: JSON.stringify({ test: "another test" })
+      });
+  }*/
 
 };
