@@ -7,7 +7,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "watch": "watchify react-app.js -o public/js/bundle.js -v",
+    "watch": "watchify app.js -o public/js/bundle.js -v",
     "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
     "start": "npm run watch & nodemon server.js"
