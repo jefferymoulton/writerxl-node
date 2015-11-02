@@ -2,9 +2,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 var salt = bcrypt.genSaltSync();
 
-var Schema = mongoose.Schema;
-
-var UserSchema = new Schema({
+var schema = new mongoose.Schema({
     email:              { type: String, index: { unique: true } },
     first_name:         String,
     last_name:          String,
@@ -13,7 +11,7 @@ var UserSchema = new Schema({
     date_created:       Date
 });
 
-UserSchema
+schema
     .virtual('password')
     .set(function(password) {
         this._password = password;
@@ -21,4 +19,4 @@ UserSchema
     })
     .get(function() { return this._password });
 
-module.exports = User = mongoose.model('User', UserSchema);
+module.exports = User = mongoose.model('User', schema);
