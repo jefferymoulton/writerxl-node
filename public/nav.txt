@@ -1,0 +1,38 @@
+
+            <ul className="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/signup">
+                        <span className="glyphicon glyphicon-user"></span> Sign Up
+                    </a>
+                </li>
+                <li className="dropdown">
+                    <a className="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span className="glyphicon glyphicon-log-in"></span> Log In
+                        <span className="glyphicon glyphicon-caret"></span>
+                    </a>
+                    <ul className="dropdown-menu dropdown-form">
+                        <li className="dropdown">
+                            <div>
+                                <form id="loginForm">
+                                    <div className="form-group">
+                                        <label className="sr-only" for="email">E-mail Address</label>
+                                        <input id="email" type="text" placeholder="E-mail Address" />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="sr-only" for="password">Password</label>
+                                        <input id="password" type="password" placeholder="Password" />
+                                    </div>
+                                    <div className="checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Remember Me
+                                        </label>
+                                    </div>
+                                    <div className="form-group">
+                                        <button className="btn btn-primary">Sign In</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
